@@ -67,6 +67,7 @@ void CarRentalSys::login()
 	else
 	{
 		cout << "Account not found.\n";
+		system("pause");
 	}
 }
 

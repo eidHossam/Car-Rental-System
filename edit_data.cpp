@@ -132,10 +132,9 @@ void edit_data::input_new_value(int operation, int data_count)
 
 void edit_data::reorder(fstream& file, int items_count, int numOfData)
 {
-	new_file.close();
-	new_file.open("temp.csv", ios::out | ios::app);
+	if(!new_file.is_open())
+		new_file.open("temp.csv", ios::out | ios::app);
 
-	string swap;
 	string id = tempData[0];
 	for (int num = stoi(id); num < (items_count - 1); )
 	{

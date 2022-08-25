@@ -60,6 +60,9 @@ void Client_edits_request::choose_request_to_edit()
 
 		if (reservation_id == "100")
 		{
+			file.close();
+			new_file.close();
+
 			return;
 		}
 
